@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "mithril",
+  "key": {
+    "#": {
+      "item": "lotr:raw_mithril"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "lotr:raw_mithril_block"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,5 @@
+// 1.20.1	2024-03-31T21:24:04.5816833	Loot Tables
+d69bf016bc8b8d90df123dd5fe00757e45f89b95 data/lotr/loot_tables/blocks/deepslate_mithril_block.json
+55909d9f3dce8a8e57945cdecbefd39f534f8810 data/lotr/loot_tables/blocks/mithril_block.json
+e63b268f983ba8090a34ee06419619d3055e9baf data/lotr/loot_tables/blocks/mithril_ore.json
+bfa21431ebc2586953e7bf4777f8737ac2081cfd data/lotr/loot_tables/blocks/raw_mithril_block.json

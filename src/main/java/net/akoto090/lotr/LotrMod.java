@@ -1,8 +1,12 @@
 package net.akoto090.lotr;
 
 import com.mojang.logging.LogUtils;
+import net.akoto090.lotr.block.ModBlocks;
+import net.akoto090.lotr.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -24,16 +28,30 @@ public class LotrMod {
 
     public LotrMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
-
         MinecraftForge.EVENT_BUS.register(this);
+        modEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
     }
 
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.MITHRIL);
+            event.accept(ModItems.RAW_MITHRIL);
+        }
 
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.MITHRIL_BLOCK);
+            event.accept(ModBlocks.MITHRIL_ORE);
+            event.accept(ModBlocks.DEEPSLATE_MITHRIL_ORE);
+            event.accept(ModBlocks.RAW_MITHRIL_BLOCK);
+        }
+    }
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
     }

@@ -1,0 +1,13 @@
+// 1.20.1	2024-03-31T21:24:04.5831836	Block States: lotr
+c1f60824578aa028080c39770dadac4632e02758 assets/lotr/blockstates/deepslate_mithril_block.json
+7fcb6e706d4b4015bf6c4d3c3d5479116ebddf80 assets/lotr/blockstates/mithril_block.json
+24d23a58ab038e9425f4287dcfdd96a7b530f824 assets/lotr/blockstates/mithril_ore.json
+736e9b0d6ad9fea0460ecb3de2c40e7fbe9ac32c assets/lotr/blockstates/raw_mithril_block.json
+fe07f370230c24b1496ae92a2aee1a868aa70464 assets/lotr/models/block/deepslate_mithril_block.json
+6d88edc84c6b57f221fcca38dcf2bbe297eaf597 assets/lotr/models/block/mithril_block.json
+aaf953c7ef906a6a5c79ae86737114297e34e9c4 assets/lotr/models/block/mithril_ore.json
+6494b59e35b7bbca19e0c485f496116cbb7167d3 assets/lotr/models/block/raw_mithril_block.json
+07e8f12efc220f8c89827436f4195d97493bcc23 assets/lotr/models/item/deepslate_mithril_block.json
+0137a85d4d45aac976a8496df2b175f548d85009 assets/lotr/models/item/mithril_block.json
+ff9ca0e93c605602de1fb2a137e554134f7c6846 assets/lotr/models/item/mithril_ore.json
+988697269e738bbd91faa5bd93f0a451c2460c0b assets/lotr/models/item/raw_mithril_block.json
