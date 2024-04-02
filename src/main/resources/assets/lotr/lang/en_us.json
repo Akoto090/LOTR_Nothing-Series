@@ -3,6 +3,17 @@
   "item.lotr.raw_mithril": "Raw Mithril",
   "block.lotr.mithril_block": "Mithril Block",
   "block.lotr.mithril_ore": "Mithril Ore",
-  "block.lotr.mithril_deepslate_block": "Deepslate Mithril Ore",
-  "block-lotr_raw_mithril_block": "Block of Raw Mithril"
+  "block.lotr.deepslate_mithril_block": "Deepslate Mithril Ore",
+  "block.lotr.raw_mithril_block": "Block of Raw Mithril",
+  "creativetab.lotr_blocks_tab": "Middle-earth Blocks",
+  "creativetab.lotr_utilities_tab": "Middle-earth Utilities",
+  "creativetab.lotr_decorations_tab": "Middle-earth Decorations",
+  "creativetab.lotr_food_and_drink_tab": "Middle-earth Food and Drink",
+  "creativetab.lotr_materials_tab": "Middle-earth Materials",
+  "creativetab.lotr_miscellaneous_tab": "Middle-earth Miscellaneous",
+  "creativetab.lotr_tools_tab": "Middle-earth Tools",
+  "creativetab.lotr_combat_tab": "Middle-earth Combat",
+  "creativetab.lotr_ spawning_tab": "Middle-earth Spawning",
+  "creativetab.lotr_story_tab": "Middle-earth Story",
+  "item.lotr_mud_ball": "Mud Ball"
 }

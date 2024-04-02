@@ -2,6 +2,8 @@ package net.akoto090.lotr;
 
 import com.mojang.logging.LogUtils;
 import net.akoto090.lotr.block.ModBlocks;
+import net.akoto090.lotr.entity.ModEntities;
+import net.akoto090.lotr.item.ModCreativeModeTabs;
 import net.akoto090.lotr.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -28,8 +30,11 @@ public class LotrMod {
 
     public LotrMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -42,14 +47,10 @@ public class LotrMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.MITHRIL);
-            event.accept(ModItems.RAW_MITHRIL);
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.MITHRIL_BLOCK);
-            event.accept(ModBlocks.MITHRIL_ORE);
-            event.accept(ModBlocks.DEEPSLATE_MITHRIL_ORE);
-            event.accept(ModBlocks.RAW_MITHRIL_BLOCK);
         }
     }
     @SubscribeEvent

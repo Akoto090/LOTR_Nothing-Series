@@ -19,6 +19,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.MITHRIL);
         simpleItem(ModItems.RAW_MITHRIL);
+        simpleItem(ModItems.MUD_BALL);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
