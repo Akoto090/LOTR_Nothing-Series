@@ -2,9 +2,12 @@ package net.akoto090.lotr;
 
 import com.mojang.logging.LogUtils;
 import net.akoto090.lotr.block.ModBlocks;
-import net.akoto090.lotr.entity.ModEntities;
+import net.akoto090.lotr.entity.ModEntites;
 import net.akoto090.lotr.item.ModCreativeModeTabs;
 import net.akoto090.lotr.item.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -16,6 +19,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
+import javax.swing.text.html.parser.Entity;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(LotrMod.MOD_ID)
@@ -34,7 +39,7 @@ public class LotrMod {
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-        ModEntities.register(modEventBus);
+        ModEntites.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -61,6 +66,7 @@ public class LotrMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntites.MUD_BALL.get(), ThrownItemRenderer::new);
 
         }
     }

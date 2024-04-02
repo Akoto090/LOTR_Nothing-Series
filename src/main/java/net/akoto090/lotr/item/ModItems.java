@@ -1,6 +1,7 @@
 package net.akoto090.lotr.item;
 
 import net.akoto090.lotr.LotrMod;
+import net.akoto090.lotr.entity.custom.MudItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
@@ -22,4 +23,6 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_MITHRIL = ITEMS.register("raw_mithril",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MUD_BALL = ITEMS.register("mud_ball",
+            () -> new MudItem(new Item.Properties()));
 }
