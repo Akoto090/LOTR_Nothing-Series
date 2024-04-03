@@ -15,5 +15,6 @@
   "creativetab.lotr_combat_tab": "Middle-earth Combat",
   "creativetab.lotr_ spawning_tab": "Middle-earth Spawning",
   "creativetab.lotr_story_tab": "Middle-earth Story",
-  "item.lotr_mud_ball": "Mud Ball"
+  "item.lotr.mud_ball": "Mud Ball",
+  "item.lotr.pebble": "Pebble"
 }

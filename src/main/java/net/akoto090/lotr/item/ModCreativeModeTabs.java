@@ -49,6 +49,7 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.MITHRIL_BLOCK.get()))
                     .title(Component.translatable("creativetab.lotr_miscellaneous_tab")).displayItems((DisplayParameters, output) -> {
                         output.accept(ModItems.MUD_BALL.get());
+                        output.accept(ModItems.PEBBLE.get());
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> LOTR_TAB7 = CREATIVE_MODE_TABS.register("lotr_tools_tab",

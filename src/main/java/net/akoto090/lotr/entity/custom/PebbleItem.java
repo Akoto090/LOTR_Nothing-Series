@@ -6,13 +6,12 @@ import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.projectile.Snowball;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-public class MudItem extends Item {
-    public MudItem(Properties pProperties) {
+public class PebbleItem extends Item {
+    public PebbleItem(Properties pProperties) {
         super(pProperties);
     }
 
@@ -21,10 +20,10 @@ public class MudItem extends Item {
         ItemStack $$3 = pPlayer.getItemInHand(pUsedHand);
         pLevel.playSound((Player)null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(), SoundEvents.SNOWBALL_THROW, SoundSource.NEUTRAL, 0.5F, 0.4F / (pLevel.getRandom().nextFloat() * 0.4F + 0.8F));
         if (!pLevel.isClientSide) {
-            MudProjectileEntity MudProjectile = new MudProjectileEntity(pLevel, pPlayer);
-            MudProjectile.setItem($$3);
-            MudProjectile.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 0.0F);
-            pLevel.addFreshEntity(MudProjectile);
+            PebbleProjectileEntity PebbleProjectile = new PebbleProjectileEntity(pLevel, pPlayer);
+            PebbleProjectile.setItem($$3);
+            PebbleProjectile.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 0.0F);
+            pLevel.addFreshEntity(PebbleProjectile);
         }
 
         pPlayer.awardStat(Stats.ITEM_USED.get(this));

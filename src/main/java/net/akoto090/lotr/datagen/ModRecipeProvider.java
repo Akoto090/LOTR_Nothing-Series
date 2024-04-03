@@ -6,10 +6,13 @@ import net.akoto090.lotr.item.ModItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -44,6 +47,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 "lotr:raw_mithril", "mithril","lotr:raw_mithril_block", "mithril");
         oreSmelting(pWriter, MITHRIL_SMELTABLE, RecipeCategory.MISC, ModItems.MITHRIL.get(), 0.25f, 200, "mithril");
         oreBlasting(pWriter, MITHRIL_SMELTABLE, RecipeCategory.MISC, ModItems.MITHRIL.get(), 0.25f, 100, "mithril");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.MUD)
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModItems.MUD_BALL.get())
+                .unlockedBy("has_mithril", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.MUD_BALL.get()).build()))
+                .save(pWriter);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
