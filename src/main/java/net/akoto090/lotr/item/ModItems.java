@@ -3,6 +3,7 @@ package net.akoto090.lotr.item;
 import net.akoto090.lotr.LotrMod;
 import net.akoto090.lotr.entity.custom.MudItem;
 import net.akoto090.lotr.entity.custom.PebbleItem;
+import net.akoto090.lotr.entity.custom.PlateItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
@@ -29,4 +30,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> PEBBLE = ITEMS.register("pebble",
             () -> new PebbleItem(new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> PLATE = ITEMS.register("plate",
+            () -> new PlateItem(new Item.Properties().stacksTo(16)));
 }

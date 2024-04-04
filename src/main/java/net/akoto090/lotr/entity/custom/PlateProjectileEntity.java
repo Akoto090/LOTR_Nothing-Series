@@ -15,19 +15,19 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 
 
-public class PebbleProjectileEntity extends ThrowableItemProjectile {
+public class PlateProjectileEntity extends ThrowableItemProjectile {
 
-    public PebbleProjectileEntity(EntityType<? extends ThrowableItemProjectile> pEntityType, Level pLevel) {
+    public PlateProjectileEntity(EntityType<? extends ThrowableItemProjectile> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
 
-    public PebbleProjectileEntity(Level pLevel) {
-        this(ModEntites.PEBBLE.get(), pLevel);
+    public PlateProjectileEntity(Level pLevel) {
+        this(ModEntites.PLATE.get(), pLevel);
     }
 
-    public PebbleProjectileEntity(Level pLevel, LivingEntity livingEntity) {
-        super(ModEntites.PEBBLE.get(), livingEntity, pLevel);
+    public PlateProjectileEntity(Level pLevel, LivingEntity livingEntity) {
+        super(ModEntites.PLATE.get(), livingEntity, pLevel);
     }
 
     @Override
@@ -62,16 +62,4 @@ public class PebbleProjectileEntity extends ThrowableItemProjectile {
             this.remove(RemovalReason.DISCARDED);
         }
     }
-
-    @Override
-    public void tick() {
-        super.tick();
-        double speed = Math.sqrt(this.getDeltaMovement().x * this.getDeltaMovement().x + this.getDeltaMovement().z * this.getDeltaMovement().z);
-        if (speed > 0.1 && this.getDeltaMovement().y < 0.0 && this.isInWater()) {
-            double factor = (0.8 - 0.4) + 0.4;
-            this.setDeltaMovement(this.getDeltaMovement().x * factor, this.getDeltaMovement().y + factor, this.getDeltaMovement().z * factor);
-        }
-    }
-
-
 }

@@ -1,6 +1,8 @@
 package net.akoto090.lotr.entity.custom;
 
 import net.akoto090.lotr.entity.ModEntites;
+import net.minecraft.core.particles.ParticleType;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -61,9 +63,9 @@ public class MudProjectileEntity extends ThrowableItemProjectile {
         if (!this.level().isClientSide) {
             Vec3 v = result.getLocation();
             this.level().playSound(null, v.x, v.y, v.z, SoundEvents.MUD_HIT, SoundSource.NEUTRAL, 0.75F, 1);
+            this.level().addParticle(ParticleTypes.ITEM_SNOWBALL, v.x, v.y, v.z, 0, 0.1, 0);
             this.level().broadcastEntityEvent(this, (byte) 3);
             this.remove(RemovalReason.DISCARDED);
         }
     }
 }
-

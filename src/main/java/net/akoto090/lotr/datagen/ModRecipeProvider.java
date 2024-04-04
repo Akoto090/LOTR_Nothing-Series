@@ -55,6 +55,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_mithril", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModItems.MUD_BALL.get()).build()))
                 .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MUD_BALL.get(), 4)
+                .requires(Blocks.MUD)
+                .unlockedBy("has_mithril_block", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.MUD).build()))
+                .save(pWriter);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

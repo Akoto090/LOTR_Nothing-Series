@@ -21,6 +21,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RAW_MITHRIL);
         simpleItem(ModItems.MUD_BALL);
         simpleItem(ModItems.PEBBLE);
+        simpleItem(ModItems.PLATE);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

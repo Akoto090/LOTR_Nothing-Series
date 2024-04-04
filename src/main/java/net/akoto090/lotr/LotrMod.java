@@ -68,6 +68,7 @@ public class LotrMod {
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntites.MUD_BALL.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntites.PEBBLE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntites.PLATE.get(), ThrownItemRenderer::new);
 
         }
     }

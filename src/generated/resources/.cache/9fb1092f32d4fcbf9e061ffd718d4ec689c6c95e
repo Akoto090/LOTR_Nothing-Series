@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-03T04:19:41.5366855	Recipes
+// 1.20.1	2024-04-03T17:50:11.877032	Recipes
 14d7ca3a26833bf1ac4aaba433e046cfbe2e17e7 data/lotr/advancements/recipes/misc/mithril_block.json
 4beffcfb87d86207b6fd9ce16a3617962a0bb485 data/lotr/advancements/recipes/misc/mithril_ingot.json
 1102827c3de19d232b5b80023248fa0bb0eaaa7d data/lotr/advancements/recipes/misc/mithril_ingot_from_blasting_deepslate_mithril_block.json
@@ -7,6 +7,7 @@
 f37b63fb9060c0dab6218e7009592d5f521178f3 data/lotr/advancements/recipes/misc/mithril_ingot_from_smelting_deepslate_mithril_block.json
 8979f4fc4684d44a711caf96271f14b79d5d7afb data/lotr/advancements/recipes/misc/mithril_ingot_from_smelting_mithril_ore.json
 d56a4c58c23b3c570929e28854e6a84486b75912 data/lotr/advancements/recipes/misc/mithril_ingot_from_smelting_raw_mithril.json
+f1b2b31552940d2c304f8bc6c011197824e3cdc9 data/lotr/advancements/recipes/misc/mud_ball.json
 053575fcd591f613a0f21b106a107de22e88f809 data/lotr/advancements/recipes/misc/raw_mithril.json
 fd9442b49b6b76e865f3900cf2f2d2def08a5312 data/lotr/advancements/recipes/misc/raw_mithril_block.json
 2d22358c5ae803966575f8d8fcf53bb4ebe892e8 data/lotr/recipes/mithril_block.json
@@ -17,6 +18,7 @@ b9f81146cfa624c06056a4eb1e0c0c5e53ba11e4 data/lotr/recipes/mithril_ingot_from_bl
 5390419cd4bc92551bd456c4c6d4b24caca7d670 data/lotr/recipes/mithril_ingot_from_smelting_deepslate_mithril_block.json
 8dd2fc1c2a0a5f09afb0a6f72a80f057d0b70cd8 data/lotr/recipes/mithril_ingot_from_smelting_mithril_ore.json
 6e08bc1e0269ad62d456b64b66caf92b07ebef26 data/lotr/recipes/mithril_ingot_from_smelting_raw_mithril.json
+c4f9849e574e8ab00fd1032bbb32c8c1e3aa19e7 data/lotr/recipes/mud_ball.json
 c45ac8d34a6cae8a6496b35ec5c64ac7327dbffa data/lotr/recipes/raw_mithril.json
 57165408553a230c1c4ceff2ba7d1e5c2ab8dfc3 data/lotr/recipes/raw_mithril_block.json
 31373efa6511e4eb3e316262af84e8a230b7970e data/minecraft/advancements/recipes/misc/mud.json
