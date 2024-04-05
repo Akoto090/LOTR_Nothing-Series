@@ -68,13 +68,8 @@ public class PlateProjectileEntity extends ThrowableItemProjectile {
     public void tick() {
         super.tick();
         double speed = Math.sqrt(this.getDeltaMovement().x * this.getDeltaMovement().x + this.getDeltaMovement().z * this.getDeltaMovement().z);
-<<<<<<< HEAD
         if (speed > 0.1 && this.getDeltaMovement().y < 0.0 && this.isInWaterOrRain()) {
             double factor = 0.8;
-=======
-        if (speed > 0.1 && this.getDeltaMovement().y < 0.0 && this.isInWater()) {
-            double factor = Math.random() * (0.8 - 0.4) + 0.4;
->>>>>>> 724e1391fdac1c118fabcab86e7b9367018e9ed8
             this.setDeltaMovement(this.getDeltaMovement().x * factor, this.getDeltaMovement().y + factor, this.getDeltaMovement().z * factor);
         }
     }

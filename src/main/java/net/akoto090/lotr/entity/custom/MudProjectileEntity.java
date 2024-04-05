@@ -49,8 +49,9 @@ public class MudProjectileEntity extends ThrowableItemProjectile {
     protected void onHitEntity(EntityHitResult pResult) {
         if (!this.level().isClientSide()) {
             LivingEntity hitEntity = (LivingEntity) pResult.getEntity();
+
             MobEffectInstance effectInstance = new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 3);
-            hitEntity.addEffect(effectInstance);
+            if (hitEntity.canBeAffected(effectInstance))  hitEntity.addEffect(effectInstance);
         }
 
         this.discard();
