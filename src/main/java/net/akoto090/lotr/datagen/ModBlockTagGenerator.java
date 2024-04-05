@@ -24,7 +24,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.MITHRIL_BLOCK.get(),
                         ModBlocks.RAW_MITHRIL_BLOCK.get(),
                         ModBlocks.MITHRIL_ORE.get(),
-                        ModBlocks.DEEPSLATE_MITHRIL_ORE.get());
+                        ModBlocks.DEEPSLATE_MITHRIL_ORE.get(),
+                        ModBlocks.PLATE_BLOCK.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.MITHRIL_BLOCK.get(),

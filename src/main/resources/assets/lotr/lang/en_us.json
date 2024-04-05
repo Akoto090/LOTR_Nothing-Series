@@ -17,5 +17,6 @@
   "creativetab.lotr_story_tab": "Middle-earth Story",
   "item.lotr.mud_ball": "Mud Ball",
   "item.lotr.pebble": "Pebble",
-  "item.lotr.plate": "Plate"
+  "item.lotr.plate": "Plate",
+  "block.lotr.plate_block": "Plate"
 }

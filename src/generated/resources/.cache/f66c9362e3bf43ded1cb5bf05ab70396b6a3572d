@@ -1,7 +1,8 @@
-// 1.20.1	2024-03-31T21:24:04.5831836	Block States: lotr
+// 1.20.1	2024-04-05T02:59:13.2571748	Block States: lotr
 c1f60824578aa028080c39770dadac4632e02758 assets/lotr/blockstates/deepslate_mithril_block.json
 7fcb6e706d4b4015bf6c4d3c3d5479116ebddf80 assets/lotr/blockstates/mithril_block.json
 24d23a58ab038e9425f4287dcfdd96a7b530f824 assets/lotr/blockstates/mithril_ore.json
+1cfdde789e65f2d061b6c4cb0608e9f1ea37f140 assets/lotr/blockstates/plate_block.json
 736e9b0d6ad9fea0460ecb3de2c40e7fbe9ac32c assets/lotr/blockstates/raw_mithril_block.json
 fe07f370230c24b1496ae92a2aee1a868aa70464 assets/lotr/models/block/deepslate_mithril_block.json
 6d88edc84c6b57f221fcca38dcf2bbe297eaf597 assets/lotr/models/block/mithril_block.json

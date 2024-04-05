@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "lotr:block/plate_block",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "lotr:block/plate_block"
+    },
+    "facing=south": {
+      "model": "lotr:block/plate_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "lotr:block/plate_block",
+      "y": 270
+    }
+  }
+}

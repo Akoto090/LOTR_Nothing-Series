@@ -1,6 +1,7 @@
 package net.akoto090.lotr.entity.custom;
 
 import net.akoto090.lotr.entity.ModEntites;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
@@ -9,6 +10,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
@@ -68,7 +70,7 @@ public class PebbleProjectileEntity extends ThrowableItemProjectile {
         super.tick();
         double speed = Math.sqrt(this.getDeltaMovement().x * this.getDeltaMovement().x + this.getDeltaMovement().z * this.getDeltaMovement().z);
         if (speed > 0.1 && this.getDeltaMovement().y < 0.0 && this.isInWater()) {
-            double factor = (0.8 - 0.4) + 0.4;
+            double factor = Math.random() * (0.8 - 0.4) + 0.4;
             this.setDeltaMovement(this.getDeltaMovement().x * factor, this.getDeltaMovement().y + factor, this.getDeltaMovement().z * factor);
         }
     }

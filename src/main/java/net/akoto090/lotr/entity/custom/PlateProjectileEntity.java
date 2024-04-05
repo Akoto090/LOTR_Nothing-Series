@@ -16,7 +16,7 @@ import net.minecraft.world.phys.Vec3;
 
 
 public class PlateProjectileEntity extends ThrowableItemProjectile {
-
+    private int plateSpin;
     public PlateProjectileEntity(EntityType<? extends ThrowableItemProjectile> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
@@ -53,6 +53,7 @@ public class PlateProjectileEntity extends ThrowableItemProjectile {
         entity.hurt(this.level().damageSources().thrown(this, this.getOwner()), i);
     }
 
+
     protected void onHit(HitResult result) {
         super.onHit(result);
         if (!this.level().isClientSide) {
@@ -60,6 +61,17 @@ public class PlateProjectileEntity extends ThrowableItemProjectile {
             this.level().playSound(null, v.x, v.y, v.z, SoundEvents.DRIPSTONE_BLOCK_BREAK, SoundSource.NEUTRAL, 0.75F, 1);
             this.level().broadcastEntityEvent(this, (byte) 3);
             this.remove(RemovalReason.DISCARDED);
+        }
+    }
+    @Override
+    public void tick() {
+        super.tick();
+        this.plateSpin++;
+        this.setYRot((this.plateSpin % 12) / 12.0F * 360.0F);
+        double speed = Math.sqrt(this.getDeltaMovement().x * this.getDeltaMovement().x + this.getDeltaMovement().z * this.getDeltaMovement().z);
+        if (speed > 0.1 && this.getDeltaMovement().y < 0.0 && this.isInWaterOrRain()) {
+            double factor = Math.random() * (0.8 - 0.4) + 0.4;
+            this.setDeltaMovement(this.getDeltaMovement().x * factor, this.getDeltaMovement().y + factor, this.getDeltaMovement().z * factor);
         }
     }
 }

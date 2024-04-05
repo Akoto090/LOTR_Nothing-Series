@@ -5,6 +5,7 @@ import net.akoto090.lotr.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -20,6 +21,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.MITHRIL_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_MITHRIL_ORE);
+        horizontalBlock(ModBlocks.PLATE_BLOCK.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/plate_block")));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

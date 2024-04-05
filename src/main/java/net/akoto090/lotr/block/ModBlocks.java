@@ -1,11 +1,13 @@
 package net.akoto090.lotr.block;
 
 import net.akoto090.lotr.LotrMod;
+import net.akoto090.lotr.entity.custom.PlateBlock;
 import net.akoto090.lotr.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -26,6 +28,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
     public static final RegistryObject<Block> RAW_MITHRIL_BLOCK = registerBlock ("raw_mithril_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK)));
+    public static final RegistryObject<Block> PLATE_BLOCK = registerBlock ("plate_block",
+            () -> new PlateBlock(BlockBehaviour.Properties.copy(Blocks.DECORATED_POT).instabreak().noOcclusion().sound(SoundType.DECORATED_POT_CRACKED)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
