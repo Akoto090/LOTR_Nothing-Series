@@ -34,7 +34,7 @@ public class ModEntites {
 
     public static final RegistryObject<EntityType<PlateProjectileEntity>> PLATE =
             ENTITY_TYPES.register("plate_projectile", () -> EntityType.Builder.<PlateProjectileEntity>of(PlateProjectileEntity::new, MobCategory.MISC)
-                    .sized(0.5f, 0.5f)
+                    .sized(0.75f, 0.75f)
                     .clientTrackingRange(4)
                     .updateInterval(20)
                     .setCustomClientFactory((spawnEntity, level) -> new PlateProjectileEntity(level))

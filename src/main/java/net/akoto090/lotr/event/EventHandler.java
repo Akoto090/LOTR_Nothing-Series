@@ -25,7 +25,7 @@ public class EventHandler {
                 PlateProjectileEntity PlateProjectile = new PlateProjectileEntity(l,p);
                 ItemStack item = p.getItemInHand(p.getUsedItemHand());
                 PlateProjectile.setItem(item);
-                PlateProjectile.shootFromRotation(p, p.getXRot(), p.getYRot(), 0.0F, 1.5F, 0.0F);
+                PlateProjectile.shootFromRotation(p, p.getXRot(), p.getYRot(), 0.0F, 0.5F, 0.0F);
                 event.getLevel().addFreshEntity(PlateProjectile);
 
                 p.awardStat(Stats.ITEM_USED.get(p.getUseItem().getItem()));
