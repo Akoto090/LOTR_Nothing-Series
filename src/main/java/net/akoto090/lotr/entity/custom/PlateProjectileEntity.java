@@ -69,7 +69,7 @@ public class PlateProjectileEntity extends ThrowableItemProjectile {
         this.plateSpin++;
         this.setYRot((this.plateSpin % 12) / 12.0F * 360.0F);
         double speed = Math.sqrt(this.getDeltaMovement().x * this.getDeltaMovement().x + this.getDeltaMovement().z * this.getDeltaMovement().z);
-        if (speed > 0.1 && this.getDeltaMovement().y < 0.0 && this.isInWaterOrRain()) {
+        if (speed > 0.1 && this.getDeltaMovement().y < 0.0 && this.isInWater()) {
             double factor = Math.random() * (0.8 - 0.4) + 0.4;
             this.setDeltaMovement(this.getDeltaMovement().x * factor, this.getDeltaMovement().y + factor, this.getDeltaMovement().z * factor);
         }
