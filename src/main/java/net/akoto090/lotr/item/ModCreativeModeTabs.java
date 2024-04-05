@@ -33,6 +33,7 @@ public class ModCreativeModeTabs {
     public static final RegistryObject<CreativeModeTab> LOTR_TAB3 = CREATIVE_MODE_TABS.register("lotr_decorations_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.MITHRIL_BLOCK.get()))
                     .title(Component.translatable("creativetab.lotr_decorations_tab")).displayItems((DisplayParameters, output) -> {
+                        output.accept(ModBlocks.PLATE_BLOCK.get());
                     }).build());
     public static final RegistryObject<CreativeModeTab> LOTR_TAB4 = CREATIVE_MODE_TABS.register("lotr_food_and_drink_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.MITHRIL_BLOCK.get()))
