@@ -10,7 +10,7 @@ This mod is a stand-alone project and has no affiliation to the already existing
 1. Currently the Project is in the pre alpha, releases will added when the step to the alpha is finished.
 
 ## Discord Community
-Join our Discord community to chat with fellow players, get help, and stay updated on the latest mod developments: [Nothing-Series Hub]https://discord.com/invite/CS5BHP2w8j)
+Join our Discord community to chat with fellow players, get help, and stay updated on the latest mod developments: [Nothing-Series Hub](https://discord.com/invite/CS5BHP2w8j)
 
 ## Contributing
 We welcome contributions from the community! If you have ideas for new features, bug fixes, or improvements, feel free to submit a pull request on GitHub.
